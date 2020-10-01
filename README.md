@@ -1,15 +1,18 @@
 # make_voc_dataset
-Majority of the current Deep Learning Frameworks support the **VOC Formatted Data / COCO Formatted Data** 
+Majority of the current Deep Learning Frameworks like [MMDetection](https://github.com/open-mmlab/mmdetection) or [Detectron2](https://github.com/facebookresearch/detectron2) support the **VOC Formatted Data / COCO Formatted Data**
+
 This Repository helps convert files stored in your local machine in the VOC Formatted Directory Structure
 
 This Repository uses numpy, tqdm and _mmcv_
-If you don't have them installed
-I'd recommend you perform 
+
+If you don't have them installed, I'd recommend you perform 
+
 ```
 pip install numpy
 pip install tqdm
 pip install mmcv-full
 ```
+                        
 
 The way to use this file is shown below
 ```
