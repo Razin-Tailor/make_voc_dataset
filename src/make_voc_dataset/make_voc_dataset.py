@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-import os
-import sys
 import argparse
-import mmcv
-from tqdm import tqdm
-import shutil
-import numpy as np
 import logging
+import os
+import shutil
+import sys
+
+import mmcv
+import numpy as np
+from tqdm import tqdm
 
 logging.basicConfig(
     format="[ %(asctime)s ] -- %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p"
