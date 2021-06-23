@@ -1,5 +1,0 @@
-mmcv-full
-numpy==1.19.3
-setuptools>=42
-tqdm
-wheel

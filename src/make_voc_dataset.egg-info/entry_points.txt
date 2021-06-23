@@ -1,3 +1,0 @@
-[console_scripts]
-make-voc-dataset = make_voc_dataset:main
-
