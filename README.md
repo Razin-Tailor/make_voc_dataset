@@ -1,34 +1,20 @@
-# make_voc_dataset
+# make-voc-dataset
+
 Majority of the current Deep Learning Frameworks like [MMDetection](https://github.com/open-mmlab/mmdetection) or [Detectron2](https://github.com/facebookresearch/detectron2) support the **VOC Formatted Data / COCO Formatted Data**
 
-This Repository helps convert files stored in your local machine in the VOC Formatted Directory Structure
+This simple tool helps convert files stored in your local machine in the VOC Formatted Directory Structure
 
-This Repository uses numpy, tqdm and _mmcv_
+The data should have images and their corresponding annotation_file in **xml** format.
 
-If you don't have them installed, I'd recommend you perform 
+Tools like [LabelIMG](https://github.com/tzutalin/labelImg) can be used to annotate images.
 
-```
-pip install numpy
-pip install tqdm
-pip install mmcv-full
-```
-                        
+## Options
 
-The way to use this file is shown below
-```
-python make_voc_dataset.py --help
+`-s / --source_path`
+Provide the full path where all the images and xmls are located. Please make sure the img_names are **UNIQUE**
 
-usage: make_voc_dataset.py [-h] [--base_path BASE_PATH]
-                           [--dest_path DEST_PATH] [--test_ratio TEST_RATIO]
+`-d / --dest_path`
+Provide the full to save the VOC structure
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --base_path BASE_PATH
-                        Provide the full path where all the images and xmls
-                        are located. Please make sure the img_names are UNIQUE
-  --dest_path DEST_PATH
-                        Provide the full to save the voc structure
-  --test_ratio TEST_RATIO
-                        Provide the ratio (between 0 and 1) that will be the
-                        test division of the dataset
-```
+`-t / --test_ratio`
+Provide the ratio (between 0 and 1) that will be the test division of the dataset
