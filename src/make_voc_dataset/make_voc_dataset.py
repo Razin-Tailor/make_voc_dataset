@@ -9,11 +9,13 @@ import mmcv
 import numpy as np
 from tqdm import tqdm
 
-logging.basicConfig(
-    format="[ %(asctime)s ] -- %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p"
-)
+level = logging.INFO
+format = "[ %(asctime)s ] -- %(message)s"
+handlers = [logging.FileHandler("make_voc_dataset.log"), logging.StreamHandler()]
 
-"Required image path and the xmls path and tha path to save the voc_structure"
+logging.basicConfig(
+    level=level, format=format, datefmt="%m/%d/%Y %I:%M:%S %p", handlers=handlers
+)
 
 
 def create_blank_voc_dir_str(dest_path):
@@ -66,14 +68,14 @@ def make_voc_dataset(opt):
     logging.info("Creating empty VOC directory skeleton")
     create_blank_voc_dir_str(dest_path)
 
-    print(" Copying Images ".center(80, "*"))
+    logging.info(" Copying Images ")
 
     for img_path in tqdm(images):
         src = img_path
         dest = os.path.join(dest_jpeg_path, img_path.split("/")[-1])
         shutil.copyfile(src, dest)
 
-    print(" Copying XMLs ".center(80, "*"))
+    logging.info(" Copying XMLs ")
 
     missed_xmls = 0
     for xml_path in tqdm(xmls):
@@ -95,7 +97,7 @@ def make_voc_dataset(opt):
         img_names = np.random.permutation(img_names)
         test_images = img_names[:test_ratio]
         train_images = img_names[test_ratio:]
-        print(" Working on Train Test Split ".center(80, "*"))
+        logging.info(" Working on Train Test Split ")
 
         with open(os.path.join(dest_imgset_path, "trainval.txt"), "w") as tvf:
             for img_name in train_images:
@@ -104,7 +106,7 @@ def make_voc_dataset(opt):
         with open(os.path.join(dest_imgset_path, "test.txt"), "w") as tf:
             for img_name in test_images:
                 tf.write(img_name + "\n")
-        print(" Dataset Creation Complete ".center(80, "*"))
+        logging.info(" Dataset Creation Complete ")
 
 
 def main() -> int:
