@@ -1,0 +1,3 @@
+build/*
+dist/*
+src/make_voc_dataset.egg-info/
