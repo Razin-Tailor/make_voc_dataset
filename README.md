@@ -1,5 +1,8 @@
 # make-voc-dataset
 
+[![Downloads](https://pepy.tech/badge/make-voc-dataset)](https://pepy.tech/project/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset/month)](https://pepy.tech/project/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset/week)](https://pepy.tech/project/make-voc-dataset)
+
+
 Majority of the current Deep Learning Frameworks like [MMDetection](https://github.com/open-mmlab/mmdetection) or [Detectron2](https://github.com/facebookresearch/detectron2) support the **VOC Formatted Data / COCO Formatted Data**
 
 This simple tool helps convert files stored in your local machine in the VOC Formatted Directory Structure
