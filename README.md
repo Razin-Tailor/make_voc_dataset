@@ -1,6 +1,6 @@
 # make-voc-dataset
 
-[![PyPI version](https://badge.fury.io/py/make-voc-dataset.svg)](https://badge.fury.io/py/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset)](https://pepy.tech/project/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset/month)](https://pepy.tech/project/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset/week)](https://pepy.tech/project/make-voc-dataset)
+[![PyPI version](https://badge.fury.io/py/make-voc-dataset.svg)](https://badge.fury.io/py/make-voc-dataset) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Downloads](https://pepy.tech/badge/make-voc-dataset)](https://pepy.tech/project/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset/month)](https://pepy.tech/project/make-voc-dataset) [![Downloads](https://pepy.tech/badge/make-voc-dataset/week)](https://pepy.tech/project/make-voc-dataset)
 
 
 Majority of the current Deep Learning Frameworks like [MMDetection](https://github.com/open-mmlab/mmdetection) or [Detectron2](https://github.com/facebookresearch/detectron2) support the **VOC Formatted Data / COCO Formatted Data**
